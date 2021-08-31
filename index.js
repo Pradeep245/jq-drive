@@ -51,6 +51,16 @@ app.get('/home', function (req, res) {
   if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
+	const files = fs.readdirSync(dir)
+console.log(dir);
+var dirs1 = []
+for (const file of files) {
+dirs1.push(`./upload/${file}`)
+
+}
+for(i in dirs1){
+fs.unlinkSync(dirs1[i]);
+}
 })
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
