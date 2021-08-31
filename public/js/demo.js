@@ -114,7 +114,7 @@ $(function() {
 $('#fileupload').fileupload({
     // Uncomment the following to send cross-domain cookies:
     //xhrFields: {withCredentials: true},
-    url: 'http://localhost:5000/projects'
+    url: 'https://upload-gdrive.herokuapp.com/projects'
     //console.log('ggggg')
 });
 
@@ -128,7 +128,7 @@ $('#fileupload').fileupload(
     )
 );
 
-if (window.location.hostname === '127.0.0.1') {
+if (window.location.hostname === 'https://upload-gdrive.herokuapp.com') {
     // $('#fileupload').fileupload('option', {
     //     url: 'http://localhost:5000/projects',
     //     // Enable image resizing, except for Android and Opera,
@@ -143,7 +143,7 @@ if (window.location.hostname === '127.0.0.1') {
     if ($.support.cors) {
         // console.log(window.location.hostname);
         // $.ajax({
-        //     url: 'http://localhost:5000/projects',
+        //     url: 'https://upload-gdrive.herokuapp.com/projects',
         //     type: 'POST'
         // }).fail(function () {
         //     $('<div class="alert alert-danger"/>')
